@@ -30,10 +30,7 @@ public class HttpMessageParserImpl implements HttpMessageParser {
             else if (httpMessageFields[i].startsWith("Content-Length: "))
                 httpMessageObject.setContentLength(Integer.parseInt(httpMessageFields[i].split(" ")[1].substring(0, 2)));
         }
-
-        /*if (httpMessage.contains("Content-Length")) {
-            httpMessageObject.setContentLength(Integer.parseInt(httpMessage.split("Content-Length: ")[1].substring(0, 2)));
-        }*/
+        
         return httpMessageObject;
     }
 }
